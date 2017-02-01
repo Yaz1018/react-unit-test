@@ -9,7 +9,8 @@ var CountdownForm = React.createClass({
 			this.refs.seconds.value = '';
 			this.props.onSetCountdown(parseInt(strSeconds, 10));
 		} else {
-			alert("Only number values allowed")
+			this.refs.seconds.value = '';
+			alert("Only numbers allowed")
 		}
 	},
 	render: function () {
