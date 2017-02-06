@@ -1,9 +1,12 @@
-var React = require('react');
+let React = require('react');
 
-var CountdownForm = React.createClass({
+let CountdownForm = React.createClass({
+	componentDidUpdate: function () {
+
+    },
 	onSubmit: function (e) {
 		e.preventDefault();
-		var strSeconds = this.refs.seconds.value;
+		let strSeconds = this.refs.seconds.value;
 
 		if (strSeconds.match(/^[0-9]*$/)) {
 			this.refs.seconds.value = '';
@@ -25,4 +28,4 @@ var CountdownForm = React.createClass({
 	}
 });
 
-module.exports = CountdownForm
+module.exports = CountdownForm;
